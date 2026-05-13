@@ -1,5 +1,15 @@
 "use strict";
 
+/**
+ * Fichier de logique principale du jeu.
+ *
+ * Ce fichier gère la vérification du mot proposé par le joueur.
+ * Il crée un dictionnaire des lettres du mot cible, vérifie d'abord
+ * les lettres bien placées, puis les lettres présentes mais mal placées
+ * ou absentes. Il vérifie aussi si le joueur a gagné ou perdu, et contrôle
+ * si le mot entré existe bien dans le lexique avant de valider l'essai.
+ */
+
 function create_dico(word) {
     let dico = {};
 
@@ -47,24 +57,6 @@ function correct_letter_in_grid(dico_t) {
     }
     return iswin;
 }
-
-function correct_letter_in_grid(dico_t) {
-    let iswin = 0;
-    //ajoute d'abord les lettres qui se trouvent à la bonne place
-    for (let i = 0; i < targetWord.length; i++) {
-        let tile = gameEl.children[i].children[currentRowIndex];
-        let letter_in_grid = tile.textContent;
-        let letter = targetWord[i];
-
-        if (letter_in_grid === letter) {
-            tile.classList.add("correct");
-            dico_t[letter_in_grid] -= 1;
-            iswin += 1;
-        }
-    }
-    return iswin;
-}
-
 
 function present_or_absent(dico_t, iswin) {
     for (let i = 0; i < targetWord.length; i++) {

@@ -1,5 +1,16 @@
 "use strict";
 
+"use strict";
+
+/**
+ * Fichier de gestion de l'affichage de la grille.
+ *
+ * Ce fichier contient les fonctions liées à la création et à la modification
+ * visuelle de la grille de jeu. Il permet de générer dynamiquement les lignes
+ * et les cases selon le nombre d'essais et la longueur du mot, puis d'afficher
+ * ou d'effacer une lettre dans une case précise.
+ */
+
 function setLetter(row, col, letter) {
     gameEl.children[col].children[row].textContent = letter;
 }

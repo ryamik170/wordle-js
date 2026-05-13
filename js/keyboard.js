@@ -1,5 +1,14 @@
 "use strict";
 
+/**
+ * Fichier de gestion des entrées clavier du joueur.
+ *
+ * Ce fichier permet de gérer les touches utilisées pendant la partie.
+ * Il ajoute les lettres tapées dans la grille, supprime la dernière lettre
+ * avec Backspace, vérifie si la ligne actuelle peut encore recevoir des lettres,
+ * et lance la vérification du mot lorsque l'utilisateur appuie sur Enter.
+ */
+
 function delete_letter(backspace) {
     if (backspace == "Backspace") {
         if (currentColumnIndex > 0) {

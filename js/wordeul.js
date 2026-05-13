@@ -1,5 +1,16 @@
 "use strict";
 
+/**
+ * Fichier principal du jeu.
+ * 
+ * Ce fichier gère le lancement de la partie lorsque l'utilisateur clique
+ * sur le bouton "Jouer". Il récupère les paramètres choisis par le joueur,
+ * sélectionne un mot aléatoire dans le lexique, crée la grille de jeu,
+ * cache le panneau de configuration, affiche la grille, puis active
+ * l'écoute du clavier pour permettre au joueur de jouer.
+ */
+
+
 function main() {
     console.log(targetWord);
 
