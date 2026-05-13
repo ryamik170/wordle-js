@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/wordeul.css">
+
+    <script src="js/lexicon5.js" defer></script>
+    <script src="js/lexicon.js" defer></script>
+    <script src="js/globalVariables.js" defer></script>
+    <script src="js/createGrid.js" defer></script>
+    <script src="js/gameMechanics.js" defer></script>
+    <script src="js/keyboard.js" defer></script>
+    <script src="js/wordeul.js" defer></script>
+
+    <title>wordeul</title>
+</head>
+
+<body>
+    <h1>Wordeul</h1>
+
+    <h2>But du jeu</h2>
+
+    <p>Déterminer un mot de cinq lettres.</p>
+    <p>Le joueur donne un mot et confirme avec Enter. Si le mot se trouve au dictionnaire,
+        l'ordinateur accepte le mot et indique quelles lettres sont correctes : </p>
+
+    <ul>
+        <li>celles correctement placées sont en vert ;</li>
+        <li>celles présentes mais mal placées sont en orange ;</li>
+        <li>les autres ne sont pas modifiées.</li>
+        <li>Si votre mot s'efface après confirmation, c'est qu'il n'existe pas dans le jeu !</li>
+    </ul>
+
+    <section id="paneau">
+        <div id="title">Bienvenue dans Wordeul</div>
+
+        <label>Longueur des mots</label>
+        <P id="long-mot"> <input id="word-length" type="number" value="5" min="5" max="8"> </P>
+
+        <p id="essaie2"> <label>Nb de tentatives</label> </p>
+        <p id="essaie"> <input id="attempts" type="number" value="5" min="1" max="10"> </p>
+
+        <button id="play-button">Jouer</button>
+        <div>Bienvenue dans Wordeul</div>
+    </section>
+
+    
+    <section id="game">
+
+    </section>
+
+    <p><span id="endgame">...</span></p>
+
+</body>
+
+</html>
